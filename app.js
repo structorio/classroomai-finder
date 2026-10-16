@@ -13,7 +13,7 @@ function render(){const q=document.getElementById("q").value.toLowerCase();
  grid.innerHTML=r.map(t=>`<div class="card"><h3><a href="tool.html?id=${t.id}">${t.name}</a></h3><div>${t.tasks.map(x=>`<span class=tag>${x}</span>`).join("")}</div><p>${t.price} · ${t.levels.join(", ")}</p>${t.approvals.length?`<span class="tag ok">✓ ${t.approvals.length} district approval(s)</span>`:""}</div>`).join("")}
 render();
 // Config: set these when the backends exist.
-const SIGNUP_ENDPOINT=""; // e.g. Resend audience endpoint; receives POST JSON {email}
+const SIGNUP_ENDPOINT="https://signup.kordaris.com"; // e.g. Resend audience endpoint; receives POST JSON {email}
 const TALLY_FORM_URL=""; // e.g. https://tally.so/r/xxxx
 const CONTACT="hello@kordaris.com";
 if(TALLY_FORM_URL){const l=document.getElementById("suggest-link");l.href=TALLY_FORM_URL;l.target="_blank";l.rel="noopener"}
